@@ -34,8 +34,6 @@ Q16. Write a code that gives following as an output.
 ```
 iNeuroniNeuroniNeuroniNeuron
 ```
-for i in range(1,5):
-    print("iNeuron", end="")
 
 Q17. Write a code to take a number as an input from the user and check if the number is odd or even.
 
