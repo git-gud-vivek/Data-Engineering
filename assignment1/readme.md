@@ -6,7 +6,7 @@ Q2. Why is Python called a dynamically typed language?
   * Because the type of the variable is determined only during runtime.
 
 Q3. List some pros and cons of Python programming language?
-  * Pros:-
+1. Pros:-
    - It's Simple.
    - It's Free.
    - It's Easy to Use.
