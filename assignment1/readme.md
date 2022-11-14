@@ -3,8 +3,24 @@ Q1. Why do we call Python as a general purpose and high-level programming langua
   * Because they are not written in machine-readable language, Python programs need to be processed before machines can run them. Python is an interpreted     language. That is when a program runs, its interpreter runs through the code and translates it into machine-readable byte code.
 
 Q2. Why is Python called a dynamically typed language?
+  * Because the type of the variable is determined only during runtime.
 
 Q3. List some pros and cons of Python programming language?
+  * Pros:-
+  ** It's Simple.
+  ** It's Free.
+  ** It's Easy to Use.
+  ** It's Highly Compatible.
+  ** It is Object-Oriented.
+  ** It has Lots of Libraries.
+  ** It has Built-in Data Structures.
+  ** It's Widely Applicable. 
+  * Cons:-
+  ** Poor memory efficiency.
+  ** Slow speed
+  ** Underdeveloped Database access layer compared to ODBC.
+  ** Weak in mobile computing
+  ** Runtime errors.
 
 Q4. In what all domains can we use Python?
 
