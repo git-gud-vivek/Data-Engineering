@@ -1,6 +1,6 @@
 ## Assignment Part-1
 Q1. Why do we call Python as a general purpose and high-level programming language?
-
+> because python in general
 Q2. Why is Python called a dynamically typed language?
 
 Q3. List some pros and cons of Python programming language?
