@@ -41,13 +41,13 @@ Q18. What are boolean operator?
 
 Q19. What will the output of the following?
 ```
-1 or 0
+1 or 0  => true
 
-0 and 0
+0 and 0  => false
 
-True and False and True
+True and False and True  => false
 
-1 or 0 or 0
+1 or 0 or 0  => true
 ```
 
 Q20. What are conditional statements in Python?
