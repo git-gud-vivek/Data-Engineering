@@ -7,9 +7,9 @@ Q2. Why is Python called a dynamically typed language?
 
 Q3. List some pros and cons of Python programming language?
   * Pros:-
-  ** It's Simple.
-  ** It's Free.
-  ** It's Easy to Use.
+   * It's Simple.
+   * It's Free.
+   * It's Easy to Use.
   ** It's Highly Compatible.
   ** It is Object-Oriented.
   ** It has Lots of Libraries.
