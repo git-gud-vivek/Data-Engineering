@@ -1,6 +1,6 @@
 ## Assignment Part-1
 Q1. Why do we call Python as a general purpose and high-level programming language?
-  * because python in general
+  * Because they are not written in machine-readable language, Python programs need to be processed before machines can run them. Python is an interpreted     language. That is when a program runs, its interpreter runs through the code and translates it into machine-readable byte code.
 
 Q2. Why is Python called a dynamically typed language?
 
