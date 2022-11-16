@@ -15,7 +15,7 @@ Q3. List some pros and cons of Python programming language?
    - It has Lots of Libraries.
    - It has Built-in Data Structures.
    - It's Widely Applicable. 
-  * Cons:-
+2. Cons:-
    - Poor memory efficiency.
    - Slow speed
    - Underdeveloped Database access layer compared to ODBC.
