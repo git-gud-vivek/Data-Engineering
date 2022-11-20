@@ -239,8 +239,22 @@ print(display)
 
 
 __Q26. What is a string? How can we declare string in Python?__
+```
+Strings are arrays of bytes representing Unicode characters.
+Strings are immutable, that is we cannot change or delete any character of the string. 
+The ways we can declare string in python: 
+single_qoute = 'ferrari'
+double_qoutes = "lamborghini"
+triple_qoutes = ''' big 
+                    data''' 
+```
 
 __Q27. How can we access the string using its index?__
+```
+string="iNeuron"
+print(string[0]) #i
+print(string[-1]) #n
+```
 
 __Q28. Write a code to get the desired output of the following__
 ```
@@ -270,6 +284,7 @@ print(string[::-1])
 ```
 __Q31. How can you delete entire string at once?__
 ```
+string = "Big Data iNeuron"
 print(string.replace("Big Data iNeuron", "")) 
 or
 del string
@@ -289,10 +304,24 @@ print('iNeuron\'s Big Data Course')
 ```
 
 __Q34. What is a list in Python?__
+```
+Lists are just like dynamically sized arrays,and is a sequence data type which is used to store the collection of data. 
+List items are ordered, changeable, and allow duplicate values.
+A list is a collection of things, enclosed in [ ] and separated by commas.
+```
 
 __Q35. How can you create a list in Python?__
+``` 
+lst = [1,2,'iNeuron',[1,0],(4,8)]
+print(lst)
+```
 
 __Q36. How can we access the elements in a list?__
+```
+Using index
+lst = [1,2,'iNeuron',[1,0],(4,8)]
+print(lst[2]) #iNeuron
+```
 
 __Q37. Write a code to access the word "iNeuron" from the given list.__
 ```
@@ -323,50 +352,168 @@ print(lst)
 ```
 
 __Q40. What is a tuple? How is it different from list?__
+```
+A tuple is an immutable collection and are used to store multiple items in a single variable. 
+Differences:- 
+- Tuples are written with round brackets(), Lists are written with square brackets[]. 
+- Tuple are immutable, Lists are mutable. But Both contains ordered and duplicate values.
+```
 
 __Q41. How can you create a tuple in Python?__
+```
+t1 = ('hello',1,(6,2),[7,0],{'key':'value'})
+t2 = () #empty tuple
+```
 
 __Q42. Create a tuple and try to add your name in the tuple. Are you able to do it? Support your answer with reason.__
+```
+tupl= (1,2,3)
+print(tupl)
+We can't add or remove anything from tuple because Tuples are immutable, 
+meaning that we cannot change, add or remove items after the tuple has been created.
+```
 
 __Q43. Can two tuple be appended. If yes, write a code for it. If not, why?__
+```
+Yes, 2 tuples can be appended.
+t1 = (12, 8, 6)
+t2 = (3, 4)
+resultTuple = t1 + t2  #Using + operator
+
+resultTuple = sum((t1, t2), ()) #Using sum() func.
+
+l1 = list(t1)        ##Using list() & extend() func.
+l2 = list(t2)
+l1.extend(l2)
+resultTuple = tuple(l1)
+print(resultTuple)
+```
 
 __Q44. Take a tuple as an input and print the count of elements in it.__
+```
+
+```
 
 __Q45. What are sets in Python?__
+```
+A Set is an unordered collection data type that is iterable, mutable and has no duplicate elements.Set are represented by { }
+```
 
 __Q46. How can you create a set?__
+```
+set1 = set()
+set3 = {1}
+set2 = {1,3,3,4,6,7,0}
+```
 
 __Q47. Create a set and add "iNeuron" in your set.__
+```
+set1 = {1,3,3,4,67,0}
+set1.add("iNeuron")
+print(set1)
+```
 
 __Q48. Try to add multiple values using add() function.__
+set1 = set()
+set1.add(1)
+set1.add(1)
+set1.add(2)
+set1.add(5)
+set1.add(2)
+print(set1)
+```
 
 __Q49. How is update() different from add()?__
+```
+- Use add() function to add a single element. Whereas use update() function to add multiple elements to the set.
+- add() is faster than update().
+- add () accepts immutable parameters only. Whereas update() accepts iterable sequences.
+- add() accepts a single parameter, whereas update() can accept multiple sequences.
+
+```
 
 __Q50. What is clear() in sets?__
+```
+The clear() method removes all elements in a set.
+```
 
 __Q51. What is frozen set?__
+```
+Frozen set is just an immutable version of a Python set object. 
+While elements of a set can be modified at any time, elements of the frozen set remain the same after creation.
+Due to this, frozen sets can be used as keys in Dictionary or as elements of another set. 
+But like sets, it is not ordered (the elements can be set at any index).
+Ex:-
+vowels = ('a', 'e', 'i', 'o', 'u')
+fSet = frozenset(vowels)
+```
 
 __Q52. How is frozen set different from set?__
+```
+Frozen set is just an immutable version of a Python set object. 
+While elements of a set can be modified at any time, elements of the frozen set remain the same after creation.
+Due to this, frozen sets can be used as keys in Dictionary or as elements of another set. 
+But like sets, it is not ordered (the elements can be set at any index).
+```
 
 __Q53. What is union() in sets? Explain via code.__
+```
+union-->returns all the elements from set1 & set2 with no duplicates (set is unordered & unindexed)
+set1 = {1,8,0,6,5}
+set2 = {1,2,3,5}
+
+setunion = set1 | set2
+print(setunion)
+```
 
 __Q54. What is intersection() in sets? Explain via code.__
+```
+#intersection -->retuns all the elements which are common in both sets
+set1 = {2,3,4,5,6,2,1}
+set2 = {3,4,5,4,9,0}
+
+setintersection = set1 & set2
+print(setintersection)
+```
 
 __Q55. What is dictionary ibn Python?__
+```
+A dictionary is a collection of key value pairs which is ordered*, changeable and do not allow duplicates.
+```
 
 __Q56. How is dictionary different from all other data structures.__
+```
+Dictionary items are presented in key:value pairs, and can be referred to by using the key name not by using index. 
+Dictionaries cannot have two items with the same key and keys must be immutable.
+```
 
 __Q57. How can we delare a dictionary in Python?__
+```
+dict = {} 
+dict1 = {'key1':'heart','key2':4}
+print(dict1)
+```
 
 __Q58. What will the output of the following?__
 ```
 var = {}
-print(type(var)) ##Dictionary
+print(type(var)) => Dictionary
 ```
 
 __Q59. How can we add an element in a dictionary?__
+```
+dict={}
+dict.add(1,"Big")
+dict.add(2."Data")
+print(dict)
+```
 
 __Q60. Create a dictionary and access all the values in that dictionary.__
+```
+dict2 = {1:'yahoo',2:'gmail',3:'Hotmail'}
+values = dict2.values()
+print(values)
+```
 
 __Q61. Create a nested dictionary and access all the element in the inner dictionary.__
 
