@@ -417,6 +417,7 @@ print(set1)
 ```
 
 __Q48. Try to add multiple values using add() function.__
+```
 set1 = set()
 set1.add(1)
 set1.add(1)
@@ -432,7 +433,6 @@ __Q49. How is update() different from add()?__
 - add() is faster than update().
 - add () accepts immutable parameters only. Whereas update() accepts iterable sequences.
 - add() accepts a single parameter, whereas update() can accept multiple sequences.
-
 ```
 
 __Q50. What is clear() in sets?__
@@ -526,35 +526,88 @@ print(Nested_dict['d']) ##{1:1,2:4,3:9}
 
 __Q62. What is the use of get() function?__
 ```
-
+Returns the value of the specified key
+print(Nested_dict.get('a')) => apple
 ```
 
 __Q63. What is the use of items() function?__
+```
+Returns a list containing a tuple for each key value pair
+print(Nested_dict.items())
+```
 
 __Q64. What is the use of pop() function?__
+```
+Removes the element with the specified key
+print(Nested_dict.pop('b'))
+```
 
 __Q65. What is the use of popitems() function?__
+```
+Removes the last inserted key-value pair
+print(Nested_dict.popitem())
+```
 
 __Q66. What is the use of keys() function?__
+```
+Returns a list containing the dictionary's keys
+print(Nested_dict.keys())
+```
 
 __Q67. What is the use of values() function?__
+```
+Returns a list of all the values in the dictionary
+print(Nestdict.values())
+```
 
 __Q68. What are loops in Python?__
+```
+Loops allows us to execute a statement or block of statements multiple times.
+```
 
 __Q69. How many type of loop are there in Python?__
+```
+There are two types of loops in Python: 
+1.While loop 
+2.For loop
+```
 
 __Q70. What is the difference between for and while loops?__
+```
+While loops --> A while loop is used to execute a block of statements repeatedly until a given condition is satisfied. 
+And when the condition becomes false, the line immediately after the loop in the program is executed. 
+sometimes it causes a never ending infinite loop where the condition is always true or if we forget to increment the loop condition explicitly and we have to forcefully terminate the compiler.
+
+for loops -->For loop is used for sequential traversal i.e. it is used for iterating over an iterable like String, Tuple, List, Set or Dictionary.
+The indented statements inside the for loops are executed once for each item in an iterable. 
+The variable var takes the value of the next item of the iterable each time through the loop and we need not increment it e explicitly.
+```
 
 __Q71. What is the use of continue statement?__
+```
+Continue Statement skips the execution of the program block from after the continue statement and forces the control to start the next iteration. i.e. when the continue statement is executed in the loop, the code inside the loop following the continue statement will be skipped for the current iteration and the next iteration of the loop will begin.
+```
 
 __Q72. What is the use of break statement?__
+```
+Break statement in Python is used to bring the control out of the loop when some external condition is triggered. It terminates the current loop, i.e., the loop in which it appears, and resumes execution at the next statement immediately after the end of that loop.
+```
 
 __Q73. What is the use of pass statement?__
+```
+The pass statement is a null statement.Sometimes, pass is used when the user doesn’t want any code to execute. So user can simply place pass where empty code is not allowed, like in loops, function definitions, class definitions, or in if statements. So using pass statement user avoids this error.
+```
 
 __Q74. What is the use of range() function?__
+```
+The range() function returns a sequence of numbers,in a given range starting from 0 by default,and increments by 1 (by default),and stops before a specified number. The most common use of it is to iterate sequence on a sequence of numbers using Python loops.
+```
 
 __Q75. How can you loop over a dictionary?__
-
+```
+for k,v in Nestdict.items():
+    print(k,v)
+```
 
 ### Coding problems
 Q76. Write a Python program to find the factorial of a given number.
