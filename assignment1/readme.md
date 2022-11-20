@@ -1,11 +1,11 @@
 ## Assignment Part-1
 Q1. Why do we call Python as a general purpose and high-level programming language?
 ```
-* Because they are not written in machine-readable language, Python programs need to be processed before machines can run them. Python is an interpreted     language. That is when a program runs, its interpreter runs through the code and translates it into machine-readable byte code.
+=> Because they are not written in machine-readable language, Python programs need to be processed before machines can run them. Python is an interpreted    language. That is when a program runs, its interpreter runs through the code and translates it into machine-readable byte code.
 ```
 Q2. Why is Python called a dynamically typed language?
 ```
-  * Because the type of the variable is determined only during runtime.
+=> Because the type of the variable is determined only during runtime.
 ```
 Q3. List some pros and cons of Python programming language?
 ```
@@ -92,9 +92,9 @@ print("Number of passed student : ", y)
 print("Number of failed student : ", z)  
 
 We can also take values and convert them into the list using the map() method along with the split() method.
-`# Taking multiple inputs in a single line and type casting using list() function  
+```# Taking multiple inputs in a single line and type casting using list() function  
 x = list(map(int, input("Enter multiple values: ").split()))  
-print("List of students: ", x) ` 
+print("List of students: ", x) ``` 
 ```
 
 Q10. What are keywords?
@@ -111,7 +111,7 @@ No, because it will create dilemma for interpreter.
 Q12. What is indentation? What's the use of indentaion in Python?
 ```
 Python indentation refers to adding white space before a statement to a particular block of code. In another word, all the statements with the same space to the right, belong to the same block.
-![image from gfg](https://media.geeksforgeeks.org/wp-content/uploads/20191125112615/Indentation-python2.jpg)
+[![image from gfg](/assets/images/ex.jpg "example")](https://media.geeksforgeeks.org/wp-content/uploads/20191125112615/Indentation-python2.jpg)
 ```
 
 Q13. How can we throw some output in Python?
