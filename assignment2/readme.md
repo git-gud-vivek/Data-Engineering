@@ -641,32 +641,83 @@ Q89. Write a Python program to find words which are greater than given length k.
 Q90. Write a Python program to extract unquire dictionary values.
 
 Q91. Write a Python program to merge two dictionary.
+```
+dict1 = {1:'thread',2:'needle'}
+dict2 = {6:'silk',7:'cotton'}
+
+def merge(dict1,dict2):
+    res = dict1 | dict2 
+    # or return(dict1.update(dict2)) since it returns none
+    return res
+
+merge(dict1,dict2)
+```
 
 Q92. Write a Python program to convert a list of tuples into dictionary.
 ```
 Input : [('Sachin', 10), ('MSD', 7), ('Kohli', 18), ('Rohit', 45)]
 Output : {'Sachin': 10, 'MSD': 7, 'Kohli': 18, 'Rohit': 45}
 ```
+```
+Input = [('Sachin', 10), ('MSD', 7), ('Kohli', 18), ('Rohit', 45)]
 
-Q93. Write a Python program to create a list of tuples from given list having number and its cube in each tuple.
+def converter(input):
+     result = dict(Input)  
+     return result
+print(converter(Input))
+```
+
+__Q93. Write a Python program to create a list of tuples from given list having number and its cube in each tuple.__
 ```
 Input: list = [9, 5, 6]
 Output: [(9, 729), (5, 125), (6, 216)]
 ```
+```
+lst = [9, 5, 6]
+def createTuple(lst):
+    output=[]
+    for i in lst:
+        tpl = (i,i**3)
+        output.append(tpl)
+    return output
 
-Q94. Write a Python program to get all combinations of 2 tuples.
+print(createTuple(lst))
+```
+__Q94. Write a Python program to get all combinations of 2 tuples.__
 ```
 Input : test_tuple1 = (7, 2), test_tuple2 = (7, 8)
 Output : [(7, 7), (7, 8), (2, 7), (2, 8), (7, 7), (7, 2), (8, 7), (8, 2)]
 ```
+```
+test_tuple1 = (7, 2)
+test_tuple2 = (7, 8)
+res =  [(a, b) for a in test_tuple1 for b in test_tuple2]
+res = res +  [(a, b) for a in test_tuple2 for b in test_tuple1]
 
-Q95. Write a Python program to sort a list of tuples by second item.
+print("The filtered tuple : " + str(res))
+```
+
+__Q95. Write a Python program to sort a list of tuples by second item.__
 ```
 Input : [('for', 24), ('Geeks', 8), ('Geeks', 30)] 
 Output : [('Geeks', 8), ('for', 24), ('Geeks', 30)]
 ```
+```
+def Sort_Tuple(tup):
+    lst = len(tup)
+    for i in range(0, lst):
+        for j in range(0, lst-i-1):
+            if (tup[j][1] > tup[j + 1][1]):
+                temp = tup[j]
+                tup[j]= tup[j + 1]
+                tup[j + 1]= temp
+    return tup
+ 
+tup =[('for', 24), ('Geeks', 8), ('Geeks', 30)]       
+print(Sort_Tuple(tup))
+```
 
-Q96. Write a python program to print below pattern.
+__Q96. Write a python program to print below pattern.__
 ```
 * 
 * * 
@@ -674,7 +725,13 @@ Q96. Write a python program to print below pattern.
 * * * * 
 * * * * * 
 ```
-Q97. Write a python program to print below pattern.
+```
+for i in range(1,6):
+    for j in range(1,i+1):
+        print("* ",end="")
+    print()    
+```
+__Q97. Write a python program to print below pattern.__
 ```
     *
    **
@@ -682,8 +739,20 @@ Q97. Write a python program to print below pattern.
  ****
 *****
 ```
+```
+sp = 4    #n-1, where n is row
+st = 1
+for i in range(1,6):
+    for j in range(1,sp+1):
+        print("  ",end="")
+    for j in range(1,st+1):
+        print("* ",end="")
+    sp-=1
+    st+=1
+    print()
+```
 
-Q98. Write a python program to print below pattern.
+__Q98. Write a python program to print below pattern.__
 ```
     * 
    * * 
@@ -691,14 +760,34 @@ Q98. Write a python program to print below pattern.
  * * * * 
 * * * * * 
 ```
+```
+sp = 4 
+st = 1
+for i in range(1,6):
+    for j in range(1,sp+1):
+        print("  ",end="")
+    for j in range(1,st+1):
+        print("*   ",end="")
+    sp-=1
+    st+=1
+    print()
+ ```
 
-Q99. Write a python program to print below pattern.
+__Q99. Write a python program to print below pattern.__
 ```
 1 
 1 2 
 1 2 3 
 1 2 3 4 
 1 2 3 4 5
+```
+```
+for i in range(1,6):
+    num=1
+    for j in range(1,i+1):
+        print(num ,end=" ")
+        num+=1
+    print() 
 ```
 
 Q100. Write a python program to print below pattern.
@@ -708,4 +797,12 @@ B B
 C C C 
 D D D D 
 E E E E E 
+```
+```
+ch='A'
+for i in range(1,6):
+    for j in range(1,i+1):
+        print(ch ,end=" ")
+    ch=chr(ord(ch)+1)
+    print()
 ```
