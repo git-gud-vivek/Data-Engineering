@@ -238,126 +238,165 @@ print(display)
 ```
 
 
-Q26. What is a string? How can we declare string in Python?
+__Q26. What is a string? How can we declare string in Python?__
 
-Q27. How can we access the string using its index?
+__Q27. How can we access the string using its index?__
 
-Q28. Write a code to get the desired output of the following
+__Q28. Write a code to get the desired output of the following__
 ```
 string = "Big Data iNeuron"
 desired_output = "iNeuron"
 ```
+```
+string = "Big Data iNeuron"
+temp = list(string.split())
+print(temp[2])
+```
 
-Q29. Write a code to get the desired output of the following
+__Q29. Write a code to get the desired output of the following__
 ```
 string = "Big Data iNeuron"
 desired_output = "norueNi"
 ```
+```
+string = "Big Data iNeuron"
+temp = list(string[::-1].split())
+print(temp[0])
+```
 
-Q30. Resverse the string given in the above question.
+__Q30. Resverse the string given in the above question.__
+```
+print(string[::-1])
+```
+__Q31. How can you delete entire string at once?__
+```
+print(string.replace("Big Data iNeuron", "")) 
+or
+del string
+```
 
-Q31. How can you delete entire string at once?
+__Q32. What is escape sequence?__
+```
+An escape sequence is a sequence of characters that, when used inside a character or string, does not represent itself but is converted into another character or series of characters. ex :- \', \", \\,\n etc
+```
 
-Q32. What is escape sequence?
-
-Q33. How can you print the below string?
+__Q33. How can you print the below string?__
 ```
 'iNeuron's Big Data Course'
 ```
+```
+print('iNeuron\'s Big Data Course')
+```
 
-Q34. What is a list in Python?
+__Q34. What is a list in Python?__
 
-Q35. How can you create a list in Python?
+__Q35. How can you create a list in Python?__
 
-Q36. How can we access the elements in a list?
+__Q36. How can we access the elements in a list?__
 
-Q37. Write a code to access the word "iNeuron" from the given list.
+__Q37. Write a code to access the word "iNeuron" from the given list.__
 ```
 lst = [1,2,3,"Hi",[45,54, "iNeuron"], "Big Data"]
 ``` 
+```
+print(lst[4][2])
+```
 
-Q38. Take a list as an input from the user and find the length of the list.
+__Q38. Take a list as an input from the user and find the length of the list.__
+```
+try:
+    lst = []
+    while True:
+        lst.append(int(input()))
+except:
+    print("Size of list is: ",len(lst))
+```
 
-Q39. Add the word "Big" in the 3rd index of the given list.
+__Q39. Add the word "Big" in the 3rd index of the given list.__
 ```
 lst = ["Welcome", "to", "Data", "course"]
 ```
+```
+lst = ["Welcome", "to", "Data", "course"]
+lst.insert(2, "Big")
+print(lst)
+```
 
-Q40. What is a tuple? How is it different from list?
+__Q40. What is a tuple? How is it different from list?__
 
-Q41. How can you create a tuple in Python?
+__Q41. How can you create a tuple in Python?__
 
-Q42. Create a tuple and try to add your name in the tuple. Are you able to do it? Support your answer with reason.
+__Q42. Create a tuple and try to add your name in the tuple. Are you able to do it? Support your answer with reason.__
 
-Q43. Can two tuple be appended. If yes, write a code for it. If not, why?
+__Q43. Can two tuple be appended. If yes, write a code for it. If not, why?__
 
-Q44. Take a tuple as an input and print the count of elements in it.
+__Q44. Take a tuple as an input and print the count of elements in it.__
 
-Q45. What are sets in Python?
+__Q45. What are sets in Python?__
 
-Q46. How can you create a set?
+__Q46. How can you create a set?__
 
-Q47. Create a set and add "iNeuron" in your set.
+__Q47. Create a set and add "iNeuron" in your set.__
 
-Q48. Try to add multiple values using add() function.
+__Q48. Try to add multiple values using add() function.__
 
-Q49. How is update() different from add()?
+__Q49. How is update() different from add()?__
 
-Q50. What is clear() in sets?
+__Q50. What is clear() in sets?__
 
-Q51. What is frozen set?
+__Q51. What is frozen set?__
 
-Q52. How is frozen set different from set?
+__Q52. How is frozen set different from set?__
 
-Q53. What is union() in sets? Explain via code.
+__Q53. What is union() in sets? Explain via code.__
 
-Q54. What is intersection() in sets? Explain via code.
+__Q54. What is intersection() in sets? Explain via code.__
 
-Q55. What is dictionary ibn Python?
+__Q55. What is dictionary ibn Python?__
 
-Q56. How is dictionary different from all other data structures.
+__Q56. How is dictionary different from all other data structures.__
 
-Q57. How can we delare a dictionary in Python?
+__Q57. How can we delare a dictionary in Python?__
 
-Q58. What will the output of the following?
+__Q58. What will the output of the following?__
 ```
 var = {}
-print(type(var))
+print(type(var)) ##Dictionary
 ```
 
-Q59. How can we add an element in a dictionary?
+__Q59. How can we add an element in a dictionary?__
 
-Q60. Create a dictionary and access all the values in that dictionary.
+__Q60. Create a dictionary and access all the values in that dictionary.__
 
-Q61. Create a nested dictionary and access all the element in the inner dictionary.
+__Q61. Create a nested dictionary and access all the element in the inner dictionary.__
 
-Q62. What is the use of get() function?
+__Q62. What is the use of get() function?__
 
-Q63. What is the use of items() function?
+__Q63. What is the use of items() function?__
 
-Q64. What is the use of pop() function?
+__Q64. What is the use of pop() function?__
 
-Q65. What is the use of popitems() function?
+__Q65. What is the use of popitems() function?__
 
-Q66. What is the use of keys() function?
+__Q66. What is the use of keys() function?__
 
-Q67. What is the use of values() function?
+__Q67. What is the use of values() function?__
 
-Q68. What are loops in Python?
+__Q68. What are loops in Python?__
 
-Q69. How many type of loop are there in Python?
+__Q69. How many type of loop are there in Python?__
 
-Q70. What is the difference between for and while loops?
+__Q70. What is the difference between for and while loops?__
 
-Q71. What is the use of continue statement?
+__Q71. What is the use of continue statement?__
 
-Q72. What is the use of break statement?
+__Q72. What is the use of break statement?__
 
-Q73. What is the use of pass statement?
+__Q73. What is the use of pass statement?__
 
-Q74. What is the use of range() function?
+__Q74. What is the use of range() function?__
 
-Q75. How can you loop over a dictionary?
+__Q75. How can you loop over a dictionary?__
 
 
 ### Coding problems
