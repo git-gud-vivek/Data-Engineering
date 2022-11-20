@@ -111,10 +111,8 @@ No, because it will create dilemma for interpreter.
 Q12. What is indentation? What's the use of indentaion in Python?
 ```
 Python indentation refers to adding white space before a statement to a particular block of code. In another word, all the statements with the same space to the right, belong to the same block.
-<img width="986" alt="Screenshot 2022-11-20 at 10 10 20 AM" src="https://user-images.githubusercontent.com/118146044/202885935-fb85198e-e894-408c-bc0b-daa78db91fb2.png">
-
 ```
-![image from gfg](https://media.geeksforgeeks.org/wp-content/uploads/20191125112615/Indentation-python2.jpg)
+<img width="480" alt="Screenshot 2022-11-20 at 10 10 20 AM" src="https://user-images.githubusercontent.com/118146044/202885935-fb85198e-e894-408c-bc0b-daa78db91fb2.png">
 
 Q13. How can we throw some output in Python?
 
