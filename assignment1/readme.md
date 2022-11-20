@@ -1,11 +1,14 @@
 ## Assignment Part-1
 Q1. Why do we call Python as a general purpose and high-level programming language?
-  * Because they are not written in machine-readable language, Python programs need to be processed before machines can run them. Python is an interpreted     language. That is when a program runs, its interpreter runs through the code and translates it into machine-readable byte code.
-
+```
+* Because they are not written in machine-readable language, Python programs need to be processed before machines can run them. Python is an interpreted     language. That is when a program runs, its interpreter runs through the code and translates it into machine-readable byte code.
+```
 Q2. Why is Python called a dynamically typed language?
+```
   * Because the type of the variable is determined only during runtime.
-
+```
 Q3. List some pros and cons of Python programming language?
+```
 1. Pros:-
    - It's Simple.
    - It's Free.
@@ -21,24 +24,95 @@ Q3. List some pros and cons of Python programming language?
    - Underdeveloped Database access layer compared to ODBC.
    - Weak in mobile computing
    - Runtime errors.
-
+```
 Q4. In what all domains can we use Python?
-
+```
+Domains where we can use python:-
+- Data Science
+- Automation
+- Application Devlopment
+- AI & ML
+- Desktop GUI
+- Audio/ video application
+- Console application
+```
 Q5. What are variable and how can we declare them?
+```
+Variables are containers for storing data values.
+Python has no command for declaring a variable.A variable is created the moment you first assign a value to it.
+ex:- x=5, var= "vivek", etc.
+```
 
 Q6. How can we take an input from the user in Python?
+```
+Using input() function.
+```
 
 Q7. What is the default datatype of the value that has been taken as an input using input() function?
+```
+String 
+```
 
 Q8. What is type casting?
+```
+Type Casting is the method to convert the variable data type into a certain data type in order to the operation required to be performed by users. In this article, we will see the various technique for typecasting.There can be two types of Type Casting in Python –
+
+1. Implicit Type Casting:-
+  a = 7
+  b = 3.0
+# Python automatically converts
+# c to float as it is a float addition
+  c = a + b
+  print(c)
+  print(type(c))
+2. Explicit Type Casting:-
+  x = int(1)   # x will be 1
+  y = int(2.8) # y will be 2
+  z = int("3") # z will be 3
+  
+  x = float(1)     # x will be 1.0
+  y = float(2.8)   # y will be 2.8
+  z = float("3")   # z will be 3.0
+  w = float("4.2") # w will be 4.2
+  
+  x = str("s1") # x will be 's1'
+  y = str(2)    # y will be '2'
+  z = str(3.0)  # z will be '3.0'
+```
 
 Q9. Can we take more than one input from the user using single input() function? If yes, how? If no, why?
+```
+Yes,
+Using split() Method. The split() method is useful for getting multiple inputs from users.
+**input().split(separator, maxsplit)**
+Ex- 
+x, y, z = input("Enter three values: ").split()  
+print("Total number of students: ", x)  
+print("Number of passed student : ", y)  
+print("Number of failed student : ", z)  
+
+We can also take values and convert them into the list using the map() method along with the split() method.
+`# Taking multiple inputs in a single line and type casting using list() function  
+x = list(map(int, input("Enter multiple values: ").split()))  
+print("List of students: ", x) ` 
+```
 
 Q10. What are keywords?
+```
+Keywords are special reserved words that have specific meanings and purposes and can't be used for anything but those specific purposes.
+Ex- for, while, finally, from, False, True, etc.
+```
 
 Q11. Can we use keywords as a variable? Support your answer with reason.
+```
+No, because it will create dilemma for interpreter.
+```
 
 Q12. What is indentation? What's the use of indentaion in Python?
+```
+Python indentation refers to adding white space before a statement to a particular block of code. In another word, all the statements with the same space to the right, belong to the same block.
+![image from gfg](https://media.geeksforgeeks.org/wp-content/uploads/20191125112615/Indentation-python2.jpg)
+```
 
 Q13. How can we throw some output in Python?
 
