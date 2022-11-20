@@ -1,7 +1,9 @@
 ## Assignment Part-1
 __Q1. Why do we call Python as a general purpose and high-level programming language?__
 ```
-=> Because they are not written in machine-readable language, Python programs need to be processed before machines can run them. Python is an interpreted    language. That is when a program runs, its interpreter runs through the code and translates it into machine-readable byte code.
+=> Because they are not written in machine-readable language, Python programs need to be processed before machines can run them.
+Python is an interpreted language. 
+That is when a program runs, its interpreter runs through the code and translates it into machine-readable byte code.
 ```
 __Q2. Why is Python called a dynamically typed language?__
 ```
@@ -52,7 +54,8 @@ String
 ```
 __Q8. What is type casting?__
 ```
-Type Casting is the method to convert the variable data type into a certain data type in order to the operation required to be performed by users. In this article, we will see the various technique for typecasting.There can be two types of Type Casting in Python –
+Type Casting is the method to convert the variable data type into a certain data type in order to the operation required to be performed by users.
+There can be two types of Type Casting in Python –
 
 1. Implicit Type Casting:-
   a = 7
@@ -502,10 +505,10 @@ print(type(var)) => Dictionary
 
 __Q59. How can we add an element in a dictionary?__
 ```
-dict={}
-dict.add(1,"Big")
-dict.add(2."Data")
-print(dict)
+dic={}
+dic.update({1:"Big"})
+dic.update({2:"Data"})
+print(dic)
 ```
 
 __Q60. Create a dictionary and access all the values in that dictionary.__
@@ -516,8 +519,15 @@ print(values)
 ```
 
 __Q61. Create a nested dictionary and access all the element in the inner dictionary.__
+```
+Nested_dict = {'a':'apple','b':'brownie','c':'colors','d':{1:1,2:4,3:9}}
+print(Nested_dict['d']) ##{1:1,2:4,3:9}
+```
 
 __Q62. What is the use of get() function?__
+```
+
+```
 
 __Q63. What is the use of items() function?__
 
