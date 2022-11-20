@@ -1,13 +1,13 @@
 ## Assignment Part-1
-__Q1. Why do we call Python as a general purpose and high-level programming language?
+__Q1. Why do we call Python as a general purpose and high-level programming language?__
 ```
 => Because they are not written in machine-readable language, Python programs need to be processed before machines can run them. Python is an interpreted    language. That is when a program runs, its interpreter runs through the code and translates it into machine-readable byte code.
 ```
-Q2. Why is Python called a dynamically typed language?
+__Q2. Why is Python called a dynamically typed language?__
 ```
 => Because the type of the variable is determined only during runtime.
 ```
-Q3. List some pros and cons of Python programming language?
+__Q3. List some pros and cons of Python programming language?__
 ```
 1. Pros:-
    - It's Simple.
@@ -25,7 +25,7 @@ Q3. List some pros and cons of Python programming language?
    - Weak in mobile computing
    - Runtime errors.
 ```
-Q4. In what all domains can we use Python?
+__Q4. In what all domains can we use Python?__
 ```
 Domains where we can use python:-
 - Data Science
@@ -36,21 +36,21 @@ Domains where we can use python:-
 - Audio/ video application
 - Console application
 ```
-Q5. What are variable and how can we declare them?
+__Q5. What are variable and how can we declare them?__
 ```
 Variables are containers for storing data values.
 Python has no command for declaring a variable.A variable is created the moment you first assign a value to it.
 ex:- x=5, var= "vivek", etc.
 ```
-Q6. How can we take an input from the user in Python?
+__Q6. How can we take an input from the user in Python?__
 ```
 Using input() function.
 ```
-Q7. What is the default datatype of the value that has been taken as an input using input() function?
+__Q7. What is the default datatype of the value that has been taken as an input using input() function?__
 ```
 String 
 ```
-Q8. What is type casting?
+__Q8. What is type casting?__
 ```
 Type Casting is the method to convert the variable data type into a certain data type in order to the operation required to be performed by users. In this article, we will see the various technique for typecasting.There can be two types of Type Casting in Python –
 
@@ -76,7 +76,7 @@ Type Casting is the method to convert the variable data type into a certain data
   y = str(2)    # y will be '2'
   z = str(3.0)  # z will be '3.0'
 ```
-__Q9. Can we take more than one input from the user using single input() function? If yes, how? If no, why?
+__Q9. Can we take more than one input from the user using single input() function? If yes, how? If no, why?__
 ```
 Yes,
 Using split() Method. The split() method is useful for getting multiple inputs from users.
@@ -93,26 +93,26 @@ x = list(map(int, input("Enter multiple values: ").split()))
 print("List of students: ", x) 
 ```
 
-__Q10. What are keywords?
+__Q10. What are keywords?__
 ```
 Keywords are special reserved words that have specific meanings and purposes and can't be used for anything but those specific purposes.
 Ex- for, while, finally, from, False, True, etc.
 ```
 
-__Q11. Can we use keywords as a variable? Support your answer with reason.
+__Q11. Can we use keywords as a variable? Support your answer with reason.__
 ```
 No, because it will create dilemma for interpreter.
 ```
 
-__Q12. What is indentation? What's the use of indentaion in Python?
+__Q12. What is indentation? What's the use of indentaion in Python?__
 ```
 Python indentation refers to adding white space before a statement to a particular block of code. In another word, all the statements with the same space to the right, belong to the same block.
 ```
 <img width="480" alt="Screenshot 2022-11-20 at 10 10 20 AM" src="https://user-images.githubusercontent.com/118146044/202885935-fb85198e-e894-408c-bc0b-daa78db91fb2.png">
 
-__Q13. How can we throw some output in Python?
+__Q13. How can we throw some output in Python?__
 
-__Q14. What are operators in Python?
+__Q14. What are operators in Python?__
 ```
 Operators are special symbols that perform operations on variables and values. For example,
 print(5 + 6)   # 11
@@ -125,12 +125,12 @@ print(5 + 6)   # 11
    - Special (Identity op(is, is not), Membership op(in, not in))
 ```
 
-__Q15. What is difference between / and // operators?
+__Q15. What is difference between / and // operators?__
 ```
 / => Float division
 // => Integer divison
 ```
-Q16. Write a code that gives following as an output.
+__Q16. Write a code that gives following as an output.__
 ```
 iNeuroniNeuroniNeuroniNeuron
 ```
@@ -140,7 +140,7 @@ for i in range(1,5):
     print("iNeuron", end="")
 ```
 
-__Q17. Write a code to take a number as an input from the user and check if the number is odd or even.
+__Q17. Write a code to take a number as an input from the user and check if the number is odd or even.__
 ```
 var = int(input("Enter a number: "))
 if var > 0:
@@ -152,12 +152,12 @@ else:
     print ("Give valid  positive number")
 ```
 
-__Q18. What are boolean operator?
+__Q18. What are boolean operator?__
 ```
 Boolean operators are Logical operators(and, or, not)
 ```
 
-__Q19. What will the output of the following?
+__Q19. What will the output of the following?__
 ```
 1 or 0  => 1
 
@@ -168,17 +168,17 @@ True and False and True  => false
 1 or 0 or 0  => 1
 ```
 
-__Q20. What are conditional statements in Python?
+__Q20. What are conditional statements in Python?__
 ```
 if , else, elif
 ```
 
-__Q21. What is use of 'if', 'elif' and 'else' keywords?
+__Q21. What is use of 'if', 'elif' and 'else' keywords?__
 ```
 To check for particular conditions and run the program accordingly.
 ```
 
-__Q22. Write a code to take the age of person as an input and if age >= 18 display "I can vote". If age is < 18 display "I can't vote".
+__Q22. Write a code to take the age of person as an input and if age >= 18 display "I can vote". If age is < 18 display "I can't vote".__
 ```
 var = int(input("Enter your age: "))
 if var>=18:
@@ -187,7 +187,7 @@ else:
     print ("I can't vote")
 ```
 
-__Q23. Write a code that displays the sum of all the even numbers from the given list.
+__Q23. Write a code that displays the sum of all the even numbers from the given list.__
 ```
 numbers = [12, 75, 150, 180, 145, 525, 50]
 ```
@@ -200,7 +200,7 @@ for num in numbers:
 
 print(sum_of_even)  
 ```
-__Q24. Write a code to take 3 numbers as an input from the user and display the greatest no as output.
+__Q24. Write a code to take 3 numbers as an input from the user and display the greatest no as output.__
 ```
 x,y,z =input("Enter 3 number: ").split()
 x = int(x)
@@ -216,7 +216,7 @@ elif z>x and z>y:
 
 ```
 
-__Q25. Write a program to display only those numbers from a list that satisfy the following conditions
+__Q25. Write a program to display only those numbers from a list that satisfy the following conditions__
 
 - The number must be divisible by five
 
