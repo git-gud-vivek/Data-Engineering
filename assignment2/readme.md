@@ -701,14 +701,78 @@ print(fibonacci(num))
 ```
 
 __Q82. Write a Python program to interchange the first and last element in a list.__
+```
+def swapList(newList):
+    size = len(newList)
+    
+    temp = newList[0]
+    newList[0] = newList[size - 1]
+    newList[size - 1] = temp
+     
+    return newList
+
+newList = [12, 35, 9, 56, 24]
+print(swapList(newList))
+```
 
 __Q83. Write a Python program to swap two elements in a list.__
+```
+def swapPositions(list, pos1, pos2):
+     
+    list[pos1], list[pos2] = list[pos2], list[pos1]
+    return list
+
+list = [23, 65, 19, 90]
+pos1, pos2  = 1, 3
+ 
+print(swapPositions(list, pos1-1, pos2-1))
+```
 
 __Q84. Write a Python program to find N largest element from a list.__
+```
+def Nmaxelements(list1, N):
+    final_list = []
+    for i in range(0, N):
+        max1 = 0         
+        for j in range(len(list1)):    
+            if list1[j] > max1:
+                max1 = list1[j];
+                 
+        list1.remove(max1);
+        final_list.append(max1)
+         
+    print(final_list)
+
+list1 = [2, 6, 41, 85, 0, 3, 7, 6, 10]
+N = 2
+Nmaxelements(list1, N)
+```
 
 __Q85. Write a Python program to find cumulative sum of a list.__
+```
+list=[10,20,30,40,50]
+new_list=[]
+sum_of_ele=0
+for i in range(0,len(list)):
+    sum_of_ele+=list[i]
+    new_list.append(sum_of_ele)
+     
+print(new_list)
+```
 
 __Q86. Write a Python program to check if a string is palindrome or not.__
+```
+def isPalindrome(s):
+    return s == s[::-1]
+
+s = input("Enter a string: ")
+ans = isPalindrome(s)
+ 
+if ans:
+    print("Yes")
+else:
+    print("No")
+```
 
 __Q87. Write a Python program to remove i'th element from a string.__
 
