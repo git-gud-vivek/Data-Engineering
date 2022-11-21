@@ -610,37 +610,115 @@ for k,v in Nestdict.items():
 ```
 
 ### Coding problems
-Q76. Write a Python program to find the factorial of a given number.
+__Q76. Write a Python program to find the factorial of a given number.__
+```
+def fact(num):
+     if num==0:
+          return 1
 
-Q77. Write a Python program to calculate the simple interest. Formula to calculate simple interest is SI = (P*R*T)/100
+     fact_num = num * fact(num-1)
+     return fact_num
+num=int(input("Enter the number: "))
+print(fact(num))
+```
 
-Q78. Write a Python program to calculate the compound interest. Formula of compound interest is A = P(1+ R/100)^t.
+__Q77. Write a Python program to calculate the simple interest. Formula to calculate simple interest is SI = (P*R*T)/100__
+```
+def CalcSI(p,r,t):
+    SI = (p*r*t)/100
+    return SI
 
-Q79. Write a Python program to check if a number is prime or not.
+p = int(input("Enter the principal amount:"))
+r = float(input("Enter the rate%:"))
+t = int(input("Enter the time period:"))
 
-Q80. Write a Python program to check Armstrong Number.
+print("Simple Interest is: ", CalcSI(p,r,t))
+```
 
-Q81. Write a Python program to find the n-th Fibonacci Number.
+__Q78. Write a Python program to calculate the compound interest. Formula of compound interest is A = P(1+ R/100)^t.__
+```
+def compound_interest(principle, rate, time):
+    Amount = principle * (pow((1 + rate / 100), time))
+    CI = Amount - principle
+    print("Compound interest is", CI)
+ 
+p = int(input("Enter the principal amount:"))
+r = float(input("Enter the rate of interest:"))
+t = int(input("Enter the time period:"))
+compound_interest(p, r, t)
+```
 
-Q82. Write a Python program to interchange the first and last element in a list.
+__Q79. Write a Python program to check if a number is prime or not.__
+```
+import math
 
-Q83. Write a Python program to swap two elements in a list.
+n=int(input("Enter any number: "))
+count = 0
+if n>1:
+    for div in range (2,int(math.sqrt(n))+1):
+        if (n%div == 0):
+            count+=1
+            break
+    if (count>0):
+        print("Given number is not prime")
+    else:
+        print("Given number is prime")
+else:
+    print("Given number is not prime")
+```
 
-Q84. Write a Python program to find N largest element from a list.
+__Q80. Write a Python program to check Armstrong Number.__
+```
+num = int(input("Enter the number: "))
+order = len(str(num))
+sum_of_n = 0
 
-Q85. Write a Python program to find cumulative sum of a list.
+temp = num
+while temp > 0:
+   digit = temp % 10
+   sum_of_n += digit ** order
+   temp //= 10
 
-Q86. Write a Python program to check if a string is palindrome or not.
+if num == sum_of_n:
+   print(num,"is an Armstrong number")
+else:
+   print(num,"is not an Armstrong number")
+```
 
-Q87. Write a Python program to remove i'th element from a string.
+__Q81. Write a Python program to find the n-th Fibonacci Number.__
+```
+def fibonacci(n):
+    if n <= 0:
+        return "Incorrect Output"
+    data = [0, 1]
+    if n > 2:
+        for i in range(2, n):
+            data.append(data[i-1] + data[i-2])
+    return data[n-1]
+ 
+num=int(input("Enter the number: "))
+print(fibonacci(num))
+```
 
-Q88. Write a Python program to check if a substring is present in a given string.
+__Q82. Write a Python program to interchange the first and last element in a list.__
 
-Q89. Write a Python program to find words which are greater than given length k.
+__Q83. Write a Python program to swap two elements in a list.__
 
-Q90. Write a Python program to extract unquire dictionary values.
+__Q84. Write a Python program to find N largest element from a list.__
 
-Q91. Write a Python program to merge two dictionary.
+__Q85. Write a Python program to find cumulative sum of a list.__
+
+__Q86. Write a Python program to check if a string is palindrome or not.__
+
+__Q87. Write a Python program to remove i'th element from a string.__
+
+__Q88. Write a Python program to check if a substring is present in a given string.__
+
+__Q89. Write a Python program to find words which are greater than given length k.__
+
+__Q90. Write a Python program to extract unquire dictionary values.__
+
+__Q91. Write a Python program to merge two dictionary.__
 ```
 dict1 = {1:'thread',2:'needle'}
 dict2 = {6:'silk',7:'cotton'}
@@ -653,7 +731,7 @@ def merge(dict1,dict2):
 merge(dict1,dict2)
 ```
 
-Q92. Write a Python program to convert a list of tuples into dictionary.
+__Q92. Write a Python program to convert a list of tuples into dictionary.__
 ```
 Input : [('Sachin', 10), ('MSD', 7), ('Kohli', 18), ('Rohit', 45)]
 Output : {'Sachin': 10, 'MSD': 7, 'Kohli': 18, 'Rohit': 45}
