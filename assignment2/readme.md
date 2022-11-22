@@ -775,12 +775,54 @@ else:
 ```
 
 __Q87. Write a Python program to remove i'th element from a string.__
+```
+def remove(string, i): 
+  
+    for j in range(len(string)):
+        if j == i:
+            string = string.replace(string[i], "", 1)
+    return string
+
+string = "BigDataiNeuron"
+i = 5
+print(remove(string, i))
+```
 
 __Q88. Write a Python program to check if a substring is present in a given string.__
+```
+string = "Big data By iNeuron"  
+substring = "iNeuron"  
+
+s = string.split()
+if substring in s:
+    print("yes")
+else:
+    print("no")
+```
 
 __Q89. Write a Python program to find words which are greater than given length k.__
+```
+n="hello this is big data class by iNeuron"; l=4
+s=n.split(" ")
+l=list(filter(lambda x: (len(x)>l),s))
+print(l)
+```
 
 __Q90. Write a Python program to extract unquire dictionary values.__
+```
+test_dict = {'iNeuron' : [5, 6, 7, 8],
+            'is' : [10, 11, 7, 5],
+            'best' : [6, 12, 10, 8],
+            'for' : [1, 2, 5]}
+print("The original dictionary is : " + str(test_dict))
+
+x=[]
+for i in test_dict.keys():
+    x.extend(test_dict[i])
+x=list(set(x))
+x.sort()
+print("The unique values list is : " + str(x))
+```
 
 __Q91. Write a Python program to merge two dictionary.__
 ```
