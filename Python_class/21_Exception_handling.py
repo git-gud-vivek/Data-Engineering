@@ -56,7 +56,7 @@ else:
     print("Calculation completed !!")
     print(result)
 
-# Use Of Finally Keyword
+# Use Of Finally Keyword (use case => DB connection, Resource release, etc )
 a = 5
 try:
     result = a / 0
