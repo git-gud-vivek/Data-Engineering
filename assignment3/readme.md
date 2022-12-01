@@ -1,8 +1,23 @@
 ## Python OOP Assignment
 
-Q1. What is the purpose of Python's OOP?
+__Q1. What is the purpose of Python's OOP?__
+'''
+The main purpose of OOPs is to bind the data and the functions that work on that together as a single unit so that no other part of the code can access this data.
+OOP concepts are:-
+-class
+-object
+-Polymorphism
+-Inheritance
+-Encapsulation
+-Data abstraction
+'''
 
 Q2. Where does an inheritance search look for an attribute?
+```
+ An inheritance search looks for an attribute first in the instance object, 
+ then in the class the instance was created from, then in all higher superclasses, progressing from left to right (by default). 
+ The search stops at the first place the attribute is found.
+```
 
 Q3. How do you distinguish between a class object and an instance object?
 
