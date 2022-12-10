@@ -222,90 +222,230 @@ Inheritance and Polymorphism.
 
 __Q18. Describe three applications for exception processing.__
 ```
-
+In computer programming, exception handling is the process of responding to the occurrence of exceptions – anomalous or exceptional conditions requiring special processing – during the execution of a program. In general, an exception breaks the normal flow of execution and executes a pre-registered exception handler; the details of how this is done depend on whether it is a hardware or software exception and how the software exception is implemented. Exception handling, if provided, is facilitated by specialized programming language constructs, hardware mechanisms like interrupts, or operating system (OS) inter-process communication (IPC) facilities like signals. Some exceptions, especially hardware ones, may be handled so gracefully that execution can resume where it was interrupted.
 ```
 
 __Q19. What happens if you don't do something extra to treat an exception?__
 ```
-
+In general,if we don't do something extra to treat an exception, that exception breaks the normal flow of execution of program.
 ```
 
 __Q20. What are your options for recovering from an exception in your script?__
 ```
-
+In general, an exception breaks the normal flow of execution and executes a pre-registered exception handler; the details of how this is done depend on whether it is a hardware or software exception and how the software exception is implemented. Exception handling, if provided, is facilitated by specialized programming language constructs, hardware mechanisms like interrupts, or operating system (OS) inter-process communication (IPC) facilities like signals. Some exceptions, especially hardware ones, may be handled so gracefully that execution can resume where it was interrupted.
+OR 
+simply throwing user friendly alert/notification when exception is caught. 
 ```
 
 __Q21. Describe two methods for triggering exceptions in your script.__
 ```
-
+Try – This method catches the exceptions raised by the program
+Raise – Triggers an exception manually using custom exceptions
 ```
 
 __Q22. Identify two methods for specifying actions to be executed at termination time, regardless of whether or not an exception exists.__
 ```
+=> finally
 
+try:
+    # Some Code.... 
+
+except:
+    # optional block
+    # Handling of exception (if required)
+
+else:
+    # execute if no exception
+
+finally:
+    # Some code .....(always executed)
 ```
 
 __Q23. What is the purpose of the try statement?__
 ```
-
+To catch any exceptions in block of codes where programmer thinks that is prone to get exception on their execution.
 ```
 
 __Q24. What are the two most popular try statement variations?__
 ```
-
+1. try-except with else
+2. try-except-else-finally
 ```
 
 __Q25. What is the purpose of the raise statement?__
 ```
-
+Triggers an exception manually using custom exceptions.
+if x <= 0:
+      raise ValueError(“It is not a positive number!”)
 ```
 
 __Q26. What does the assert statement do, and what other statement is it like?__
 ```
+assert keyword is used when debugging code.
+The assert keyword lets you test if a condition in your code returns True, if not, the program will raise an AssertionError.
 
+x = "hello"
+
+#if condition returns False, AssertionError is raised:
+assert x == "goodbye", "x should be 'hello'"
 ```
 
 __Q27. What is the purpose of the with/as argument, and what other statement is it like?__
 ```
+with statement is used in exception handling to make the code cleaner and much more readable. It simplifies the management of common resources like file streams.
+# file handling
+ 
+# 1) without using with statement
+file = open('file_path', 'w')
+file.write('hello world !')
+file.close()
+ 
+# 2) without using with statement
+file = open('file_path', 'w')
+try:
+    file.write('hello world')
+finally:
+    file.close()
+    
 
+# using with statement
+with open('file_path', 'w') as file:
+    file.write('hello world !')
+    
+unlike the first two implementations, there is no need to call file.close() when using with statement. The with statement itself ensures proper acquisition and release of resources. To use with statement in user defined objects you only need to add the methods __enter__() and __exit__() in the object methods.
+
+# a simple file writer object
+
+class MessageWriter(object):
+	def __init__(self, file_name):
+		self.file_name = file_name
+	
+	def __enter__(self):
+		self.file = open(self.file_name, 'w')
+		return self.file
+
+	def __exit__(self, *args):
+		self.file.close()
+
+# using with statement with MessageWriter
+
+with MessageWriter('my_file.txt') as xfile:
+	xfile.write('hello world')
 ```
 
 __Q28. What are *args, **kwargs?__
 ```
+*args in function definitions in python is used to pass a variable number of arguments to a function. It is used to pass a non-key worded, variable-length argument list.
+def myFun(arg1, *argv):
+	print("First argument :", arg1)
+	for arg in argv:
+		print("Next argument through *argv :", arg)
+
+
+myFun('Hello', 'Welcome', 'to', 'GeeksforGeeks')
+
+**kwargs in function definitions in python is used to pass a keyworded, variable-length argument list. We use the name kwargs with the double star. The reason is that the double star allows us to pass through keyword arguments (and any number of them).
+def myFun(**kwargs):
+	for key, value in kwargs.items():
+		print("%s == %s" % (key, value))
+
+
+# Driver code
+myFun(first='Geeks', mid='for', last='Geeks')
 
 ```
 
 __Q29. How can I pass optional or keyword parameters from one function to another?__
 ```
-
+Using * and **
+def f(a, *args, **kwargs):
+   ...
+   kwargs['width'] = '14.3c'
+   ...
+   g(a, *args, **kwargs)
 ```
 
 __Q30. What are Lambda Functions?__
 ```
+A lambda function is a small anonymous function. It can take any number of arguments, but can only have one expression.
+x = lambda a, b : a * b
+print(x(5, 6))
+The power of lambda is better shown when you use them as an anonymous function inside another function.
+def myfunc(n):
+  return lambda a : a * n
 
+mydoubler = myfunc(2)
+
+print(mydoubler(11))
 ```
 
 __Q31. Explain Inheritance in Python with an example?__
 ```
+One of the core concepts in object-oriented programming (OOP) languages is inheritance. It is a mechanism that allows you to create a hierarchy of classes that share a set of properties and methods by deriving a class from another class. Inheritance is the capability of one class to derive or inherit the properties from another class.
+
+class Person(object):
+
+	# Constructor
+	def __init__(self, name):
+		self.name = name
+
+	# To get name
+	def getName(self):
+		return self.name
+
+	# To check if this person is an employee
+	def isEmployee(self):
+		return False
+
+# Inherited or Subclass (Note Person in bracket)
+class Employee(Person):
+
+	# Here we return true
+	def isEmployee(self):
+		return True
+  
+# Driver code
+emp = Person("Geek1") # An Object of Person
+print(emp.getName(), emp.isEmployee())
+
+emp = Employee("Geek2") # An Object of Employee
+print(emp.getName(), emp.isEmployee())
 
 ```
 
 __Q32. Suppose class C inherits from classes A and B as class C(A,B).Classes A and B both have their own versions of method func(). If we call func() from an object of class C, which version gets invoked?__
 ```
-
+Python will always call the first thing that is found in the method resolution order. Since you specified the inheritance as A, B then A will be found first, so its method will be called.
 ```
 
 __Q33. Which methods/functions do we use to determine the type of instance and inheritance?__
 ```
-
+isinstance() and issubclass()
 ```
 
 __Q34.Explain the use of the 'nonlocal' keyword in Python.__
 ```
-
+The nonlocal keyword is used to work with variables inside nested functions, where the variable should not belong to the inner function.
+Use the keyword nonlocal to declare that the variable is not local.
 ```
 
 __Q35. What is the global keyword?__
 ```
+In Python, the global keyword allows us to modify the variable outside of the current scope. It is used to create a global variable and make changes to the variable in a local context.
 
+# global variable
+c = 1 
+def add():
+
+    # use of global keyword
+    global c
+
+    # increment c by 2
+    c = c + 2 
+
+    print(c)
+
+add()
+
+# Output: 3 
 ```
