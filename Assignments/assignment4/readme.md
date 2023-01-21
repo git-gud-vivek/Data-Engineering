@@ -400,8 +400,8 @@ newdf = df.drop_duplicates()
 
 Q25. What is the difference between .loc and .iloc in Pandas?
 ```
-The main difference between pandas loc[] vs iloc[] is loc gets DataFrame rows & columns by labels/names and iloc[] gets by integer Index/position. For loc[], if the label is not present it gives a key error. For iloc[], if the position is not present it gives an index error. In this article, I will cover the difference and similarities between loc[] and iloc[] in Pandas DataFrame by exploring with examples.
-
-<img width="707" alt="Screenshot 2023-01-22 at 2 10 06 AM" src="https://user-images.githubusercontent.com/118146044/213886329-902a6fbb-0b8f-4316-aa53-3dd167f3585f.png">
-
+The main difference between pandas loc[] vs iloc[] is loc gets DataFrame rows & columns by labels/names and iloc[] gets by integer Index/position.
+For loc[], if the label is not present it gives a key error. For iloc[], if the position is not present it gives an index error. 
+In this article, I will cover the difference and similarities between loc[] and iloc[] in Pandas DataFrame by exploring with examples.
 ```
+<img width="707" alt="Screenshot 2023-01-22 at 2 10 06 AM" src="https://user-images.githubusercontent.com/118146044/213886329-902a6fbb-0b8f-4316-aa53-3dd167f3585f.png">
