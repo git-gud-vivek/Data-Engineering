@@ -221,10 +221,8 @@ students = [('Ankit', 22, 'Up', 'Geu'),
 			]
 
 # Create a DataFrame object from list of tuples with columns and indices.
-details = pd.DataFrame(students, columns =['Name', 'Age',
-										'Place', 'College'],
-						index =[ 'b', 'c', 'a', 'e', 'f',
-								'g', 'i', 'j', 'k', 'd'])
+details = pd.DataFrame(students, columns =['Name', 'Age', 'Place', 'College'],
+				index =[ 'b', 'c', 'a', 'e', 'f', 'g', 'i', 'j', 'k', 'd'])
 
 # Sort the rows of dataframe by 'Name' column
 rslt_df = details.sort_values(by = 'Name')
@@ -267,23 +265,143 @@ df = pd.DataFrame({"A":[12, 4, 5, 44, 1],
 				"C":[20, 16, 7, 3, 8],
 				"D":[14, 3, 17, 2, 6]})
 
-df.mean(axis = 0)
+df['A'].mean(axis = 0)
 ```
 
 Q18. How do you calculate the standard deviation of a column in a Pandas DataFrame?
 ```
-
+import pandas as pd
+my_data = {'Name':pd.Series(['Tom','Jane','Vin','Eve','Will']),'Age':pd.Series([45, 67, 89, 12, 23]),'value':pd.Series([8.79,23.24,31.98,78.56,90.20])}
+print("The dataframe is :")
+my_df = pd.DataFrame(my_data)
+print(my_df)
+print("The standard deviation of column 'Age' is :")
+print(my_df['Age'].std())
+print("The standard deviation of column 'value' is :")
+print(my_df['value'].std())
 ```
 Q19. How do you calculate the correlation between two columns in a Pandas DataFrame?
+```
+import pandas as pd
+data = pd.DataFrame({
+	"column1": [12, 23, 45, 67],
+	"column2": [67, 54, 32, 1],
+	"column3": [34, 23, 56, 23]
+}
+)
+print(data)
+
+# correlation between column 1 and column2
+print(data['column1'].corr(data['column2']))
+
+# correlation between column 2 and column3
+print(data['column2'].corr(data['column3']))
+
+# correlation between column 1 and column3
+print(data['column1'].corr(data['column3']))
+
+```
 
 Q20. How do you select specific columns in a DataFrame using their labels?
+```
+import pandas as pd
+technologies = {
+    'Courses':["Spark","PySpark"],
+    'Fee' :[20000,25000],
+    'Duration':['30days','40days'],
+    'Discount':[1000,2300]
+              }
+df = pd.DataFrame(technologies)
+print(df)
+
+df2 = df[["Courses","Fee","Duration"]]
+#or
+# df.loc[,start:stop:step]
+df2 = df.loc[:, ["Courses","Fee","Discount"]]
+```
 
 Q21. How do you select specific rows in a DataFrame using their indexes?
+```
+print(df.iloc[[2,3,6]])
+```
 
 Q22. How do you sort a DataFrame by a specific column?
+```
+import pandas as pd
+students = [('Ankit', 22, 'Up', 'Geu'),
+		('Ankita', 31, 'Delhi', 'Gehu'),
+		('Rahul', 16, 'Tokyo', 'Abes'),
+		('Simran', 41, 'Delhi', 'Gehu'),
+		('Shaurya', 33, 'Delhi', 'Geu'),
+		('Harshita', 35, 'Mumbai', 'Bhu' ),
+		('Swapnil', 35, 'Mp', 'Geu'),
+		('Priya', 35, 'Uk', 'Geu'),
+		('Jeet', 35, 'Guj', 'Gehu'),
+		('Ananya', 35, 'Up', 'Bhu')
+			]
+
+# Create a DataFrame object from list of tuples with columns and indices.
+details = pd.DataFrame(students, columns =['Name', 'Age', 'Place', 'College'],
+				index =[ 'b', 'c', 'a', 'e', 'f', 'g', 'i', 'j', 'k', 'd'])
+
+# Sort the rows of dataframe by 'Name' column
+rslt_df = details.sort_values(by = 'Name')
+rslt_df
+
+```
 
 Q23. How do you create a new column in a DataFrame based on the values of another column?
+```
+We can add/append a new column to the DataFrame based on the values of another column using df.assign(), df.apply(), and, np.where() functions and return a new Dataframe after adding a new column.
+
+
+import pandas as pd
+import numpy as np
+technologies= {
+    'Courses':["Spark","PySpark","Hadoop","Python","Pandas"],
+    'Fee' :[22000,25000,23000,24000,26000],
+    'Discount':[1000,2300,1000,1200,2500]
+          }
+
+df = pd.DataFrame(technologies)
+print(df)
+
+# Add column using arithmetic operation based on existing columns 
+df["Final_Fee"] = df["Fee"] - df["Discount"]
+print(df)
+
+# Add New Column from Existing Column
+df = pd.DataFrame(technologies)
+df1 = df.assign(Discount_Percent=lambda x: x.Fee * x.Discount / 100)
+print(df1)
+
+# Add column using np.where()
+df['Discount_rating'] = np.where(df['Discount'] > 2000, 'Good', 'Bad')
+print(df)
+
+# Add column using apply()
+df['Final_fee'] = df.apply(lambda x: x['Fee'] - x['Discount'], axis=1)
+print(df)
+
+```
 
 Q24. How do you remove duplicates from a DataFrame?
+```
+import pandas as pd
+data = {
+  "name": ["Sally", "Mary", "John", "Mary"],
+  "age": [50, 40, 30, 40],
+  "qualified": [True, False, False, False]
+}
+df = pd.DataFrame(data)
+
+newdf = df.drop_duplicates()
+```
 
 Q25. What is the difference between .loc and .iloc in Pandas?
+```
+The main difference between pandas loc[] vs iloc[] is loc gets DataFrame rows & columns by labels/names and iloc[] gets by integer Index/position. For loc[], if the label is not present it gives a key error. For iloc[], if the position is not present it gives an index error. In this article, I will cover the difference and similarities between loc[] and iloc[] in Pandas DataFrame by exploring with examples.
+
+<img width="707" alt="Screenshot 2023-01-22 at 2 10 06 AM" src="https://user-images.githubusercontent.com/118146044/213886329-902a6fbb-0b8f-4316-aa53-3dd167f3585f.png">
+
+```
