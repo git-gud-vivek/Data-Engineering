@@ -2,7 +2,7 @@
 
 Q1. How do you load a CSV file into a Pandas DataFrame?
 ```
-Using Pandas
+Using read_csv()
 
 import pandas as pd
 df = pd.read_csv('data.csv')
