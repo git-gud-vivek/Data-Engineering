@@ -1,12 +1,12 @@
 ## Design Data Warehouses For Given Below Products:
-'''
+```
 Note : While designing any Data Warehouse make sure to cover given below points.
   a. Design Fact & Dimension tables
   b. Create meaningful Primary & Foreign keys
   c. Try to follow Star/SnowFlake Schema Design
   d. Try to write few SQL queries to generate insightful business metrics (This is the critical
      point because you need to understand the Data & Business both)
-'''
+```
 1. Design a Data Warehouse for IPL Cricket Tournament (Asked in Flipkart Interview for
 Senior Data Engineer role)
 2. Design a Data Warehouse for Food delivery app like Swiggy, Zomato (Asked in Grab
