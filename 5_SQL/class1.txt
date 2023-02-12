@@ -49,6 +49,7 @@ insert into employee values(3,'Amit',3000,'2021-09-15'),(4,'Niting',3500,'2021-0
 
 --- Use select command to query the data
 Select * from employee;
+Select id, name from employee;
 
 --- Example for Integrity Constraints
 Create table if not exists employee_with_constraints
