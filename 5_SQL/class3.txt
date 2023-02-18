@@ -145,7 +145,7 @@ from employee group by age;
 select country from orders_data group by country having count(*)=1;
 
 # Where Clause and Group By Clause --> What should be the proper sequence??
-# Answer -> Where Clause and then Group By ??
+# Answer -> Where Clause and then Group By ??(cause we do not want to process data that are not relatable to query, in order to have efficient sql query)
 
 # How to use GROUP_CONCAT
 # Query - Write a query to print distinct states present in the dataset for each country?
